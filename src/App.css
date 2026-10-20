@@ -1,0 +1,134 @@
+:root {
+  --bg-dark: #120f1d;
+  --bg-mid: #1b1230;
+  --card-glow: #8b5cf6;
+  --card-highlight: #f472b6;
+  --text-dark: #241b36;
+  --text-soft: #4b3d5f;
+  --light: #fdf7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
+  color: var(--light);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.product-card {
+  overflow: hidden;
+  border-radius: 28px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 30px 60px rgba(15, 10, 28, 0.45) !important;
+}
+
+.product-image-wrapper {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(244, 114, 182, 0.45));
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+}
+
+.product-content {
+  padding: 2rem 1.6rem 2.2rem;
+  color: var(--light);
+}
+
+.product-name {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: #fff9ff;
+}
+
+.product-price {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffe4ff;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.greeting-panel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 1.2rem 1.5rem;
+  width: min(100%, 460px);
+  backdrop-filter: blur(10px);
+}
+
+.greeting-panel h2 {
+  margin: 0;
+  font-weight: 700;
+  color: #fdf7ff;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  margin: 1rem auto 0;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 575px) {
+  .app-shell {
+    padding: 1.2rem 0.6rem;
+  }
+
+  .product-image-wrapper {
+    height: 280px;
+  }
+
+  .product-content {
+    padding: 1.4rem 1rem 1.7rem;
+  }
+
+  .product-name {
+    font-size: 1.5rem;
+  }
+}
